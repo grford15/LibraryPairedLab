@@ -1,10 +1,14 @@
 package models;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 
+
+@Entity
+@Table(name="borrowers")
 public class Borrower {
     private int id;
     private String name;
@@ -14,6 +18,12 @@ public class Borrower {
         this.name = name;
     }
 
+    public Borrower() {
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -22,6 +32,7 @@ public class Borrower {
         this.id = id;
     }
 
+    @Column(name="name")
     public String getName() {
         return name;
     }
@@ -30,6 +41,7 @@ public class Borrower {
         this.name = name;
     }
 
+    @OneToMany(mappedBy = "borrower", fetch = FetchType.LAZY)
     public Set<Book> getItemsBorrowed() {
         return itemsBorrowed;
     }
