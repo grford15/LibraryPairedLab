@@ -1,16 +1,20 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Borrower {
     private int id;
     private String name;
-    private ArrayList<Book> itemsBorrowed;
+    private Set<Book> itemsBorrowed;
 
-    public Borrower(String name, ArrayList<Book> itemsBorrowed) {
+    public Borrower(String name) {
         this.name = name;
-        this.itemsBorrowed = itemsBorrowed;
     }
+
+
 
     public int getId() {
         return id;
@@ -28,11 +32,11 @@ public class Borrower {
         this.name = name;
     }
 
-    public ArrayList<Book> getItemsBorrowed() {
+    public Set<Book> getItemsBorrowed() {
         return itemsBorrowed;
     }
 
-    public void setItemsBorrowed(ArrayList<Book> itemsBorrowed) {
+    public void setItemsBorrowed(Set<Book> itemsBorrowed) {
         this.itemsBorrowed = itemsBorrowed;
     }
 }
