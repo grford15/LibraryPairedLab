@@ -1,3 +1,7 @@
+package models;
+
+import models.Book;
+
 import java.util.ArrayList;
 
 public class Library {
