@@ -1,6 +1,7 @@
 package Controllers;
 
 import db.DBHelper;
+import db.Seeds;
 import models.Book;
 import models.Borrower;
 import spark.ModelAndView;
@@ -15,6 +16,8 @@ import static spark.Spark.get;
 public class LibraryController {
 
     public static void main(String[] args) {
+
+        Seeds.seedData();
 
         get("/library", (req, res) -> {
             Map<String, Object> model = new HashMap<String, Object>();
