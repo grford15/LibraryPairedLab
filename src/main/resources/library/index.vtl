@@ -1,0 +1,20 @@
+<h1>Library</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Borrower</th>
+        <th>On Loan</th>
+    </tr>
+    <tr>
+        #foreach($book in $book)
+        <td>$book.getTitle()</td>
+        <td>$book.getAuthor()</td>
+        <td>%book.getGenre().getTitle()</td>
+        <td>%book.getCurrentBorrower()</td>
+        <td>%book.isOnLoan()</td>
+        #end
+    </tr>
+</table>
