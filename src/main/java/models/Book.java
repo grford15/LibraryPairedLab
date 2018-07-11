@@ -1,4 +1,5 @@
 package models;
+import
 
 public class Book {
 
@@ -9,7 +10,7 @@ public class Book {
     private Borrower currentBorrower;
     private Genre genre;
 
-    public Book(String title, String author, boolean onLoan, Genre genre) {
+    public Book(String title, String author, Genre genre) {
         this.title = title;
         this.author = author;
         this.onLoan = false;
