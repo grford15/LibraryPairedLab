@@ -17,6 +17,8 @@ public class LibraryController {
 
     public static void main(String[] args) {
 
+        controllers.BookController bookController = new controllers.BookController();
+
         Seeds.seedData();
 
         get("/library", (req, res) -> {

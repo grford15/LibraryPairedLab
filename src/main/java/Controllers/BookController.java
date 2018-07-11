@@ -34,15 +34,15 @@ public class BookController {
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
-        post ("/books", (req, res) -> {
-            String title = req.queryParams("title");
-            String author = req.queryParams("author");
-            boolean onLoan = req.queryParams();
-            int budget = Integer.parseInt(req.queryParams("budget"));
-            Book book = new book(firstName, lastName, salary, department, budget);
-            DBHelper.save(book);
-            res.redirect("/books");
-            return null;
-        }, new VelocityTemplateEngine());
+//        post ("/books", (req, res) -> {
+//            String title = req.queryParams("title");
+//            String author = req.queryParams("author");
+//            boolean onLoan = req.queryParams();
+//            int budget = Integer.parseInt(req.queryParams("budget"));
+//            Book book = new book(firstName, lastName, salary, department, budget);
+//            DBHelper.save(book);
+//            res.redirect("/books");
+//            return null;
+//        }, new VelocityTemplateEngine());
     }
 }
