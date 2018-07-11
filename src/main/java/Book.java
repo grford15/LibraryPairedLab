@@ -10,7 +10,7 @@ public class Book {
     public Book(String title, String author, boolean onLoan, Genre genre) {
         this.title = title;
         this.author = author;
-        this.onLoan = onLoan;
+        this.onLoan = false;
         this.currentBorrower = currentBorrower;
         this.genre = genre;
     }
