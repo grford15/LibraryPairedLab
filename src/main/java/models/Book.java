@@ -1,5 +1,9 @@
 package models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="books")
 public class Book {
 
     private int id;
@@ -16,6 +20,12 @@ public class Book {
         this.genre = genre;
     }
 
+    public Book() {
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public String getTitle() {
         return title;
     }
@@ -24,6 +34,7 @@ public class Book {
         this.title = title;
     }
 
+    @Column(name="author")
     public String getAuthor() {
         return author;
     }
@@ -32,6 +43,7 @@ public class Book {
         this.author = author;
     }
 
+    @Column(name="onLoan")
     public boolean isOnLoan() {
         return onLoan;
     }
@@ -40,6 +52,8 @@ public class Book {
         this.onLoan = onLoan;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "borrower_id", nullable = true)
     public Borrower getCurrentBorrower() {
         return currentBorrower;
     }
@@ -48,6 +62,7 @@ public class Book {
         this.currentBorrower = currentBorrower;
     }
 
+    @Enumerated(value=EnumType.STRING)
     public Genre getGenre() {
         return genre;
     }
