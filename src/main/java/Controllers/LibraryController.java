@@ -17,7 +17,7 @@ public class LibraryController {
 
     public static void main(String[] args) {
 
-        controllers.BookController bookController = new controllers.BookController();
+        BookController bookController = new BookController();
 
         Seeds.seedData();
 
