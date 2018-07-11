@@ -19,4 +19,9 @@ public class BookTest {
     public void bookIsNotOnLoan() {
         assertFalse(animalFarm.isOnLoan());
     }
+
+    @Test
+    public void canGetGentreTitle(){
+        assertEquals("Fantasy", animalFarm.getGenre().getTitle());
+    }
 }
