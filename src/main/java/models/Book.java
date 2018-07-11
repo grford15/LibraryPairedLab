@@ -1,5 +1,4 @@
 package models;
-import
 
 public class Book {
 
@@ -14,7 +13,6 @@ public class Book {
         this.title = title;
         this.author = author;
         this.onLoan = false;
-        this.currentBorrower = currentBorrower;
         this.genre = genre;
     }
 

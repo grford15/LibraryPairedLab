@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class BookTest {
 
@@ -11,11 +12,11 @@ public class BookTest {
 
     @Before
     public void setUp() throws Exception {
-        Book animalFarm = new Book("Animal Farm", "George Orwell", Genre.FANTASY);
+        animalFarm = new Book("Animal Farm", "George Orwell", Genre.FANTASY);
     }
 
     @Test
     public void bookIsNotOnLoan() {
-        assertEquals(false, animalFarm.isOnLoan());
+        assertFalse(animalFarm.isOnLoan());
     }
 }
